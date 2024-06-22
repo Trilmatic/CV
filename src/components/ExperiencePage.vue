@@ -11,7 +11,7 @@
       <p>11/2015-4/2016</p>
       <p>Snowboard instructor and snowpark creator.</p>
     </div>
-    <div class="text-3xl text-gray-500">*</div>
+    <div class="text-3xl text-gray-500">•</div>
     <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">FG Forrest, a.s</h4>
@@ -46,7 +46,7 @@
         <i>Komerční banka, a. s.</i> and <i>The Prague Castle</i>.
       </p>
     </div>
-    <div class="text-3xl text-gray-500">*</div>
+    <div class="text-3xl text-gray-500">•</div>
     <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">OLC Systems s.r.o</h4>
@@ -82,7 +82,7 @@
         organisation.
       </p>
     </div>
-    <div class="text-3xl text-gray-500">*</div>
+    <div class="text-3xl text-gray-500">•</div>
     <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">NonStop Consulting s.r.o</h4>
@@ -111,7 +111,7 @@
             <path d="M15 4h5v5" /></svg
         ></a>
       </div>
-      <p>11/2020-NOW</p>
+      <p>11/2020-now</p>
       <p>
         Development of recruitment tools, data analysis tools and automation of
         recruitment process.

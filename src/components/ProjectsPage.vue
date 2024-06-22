@@ -35,7 +35,7 @@
             />
           </svg>
         </a>
-        <span>*</span>
+        <span>•</span>
         <a
           class="link flex items-center"
           href="https://formsjs.io/"

@@ -4,8 +4,18 @@ import About from "@/components/AboutPage.vue";
 import Skills from "@/components/SkillsPage.vue";
 import Projects from "@/components/ProjectsPage.vue";
 import Experience from "@/components/ExperiencePage.vue";
+import { ref, watch } from "vue";
 const { state, portfolioLoadingText, portfolioLoadingProgress } =
   usePortfolio();
+
+const container = ref(null);
+
+watch(container.value, (newValue) => {
+  if (!newValue) return;
+  container.value.addEventListener("scroll", function (e) {
+    e.preventDefault();
+  });
+});
 </script>
 <template>
   <div class="min-w-[100vw] min-h-[100vh] bg-gradient-to-r relative font-mono">
@@ -69,7 +79,7 @@ const { state, portfolioLoadingText, portfolioLoadingProgress } =
           "
           class="absolute top-2 left-2 md:top-6 md:left-6 w-[calc(100%-1rem)] h-[calc(100%-1rem)] md:w-[calc(100%-3rem)] md:h-[calc(100%-3rem)] border rounded-lg border-slate-500 z-1"
         >
-          <div class="flex-1 h-full py-8 overflow-y-auto">
+          <div class="flex-1 h-full py-8 overflow-y-auto" ref="container">
             <About
               v-if="
                 Object.values(portfolioStates).indexOf(state) >=
