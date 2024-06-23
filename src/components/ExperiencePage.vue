@@ -9,7 +9,7 @@
         <h4 class="text-xl font-bold">SPORT PROFI spol. s.r.o.</h4>
       </div>
       <p>11/2015-4/2016</p>
-      <p>Snowboard instructor and snowpark creator.</p>
+      <p>Snowboard instructor and snowpark shaper.</p>
     </div>
     <div class="text-3xl text-gray-500">•</div>
     <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
