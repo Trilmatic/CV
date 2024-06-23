@@ -274,7 +274,7 @@ onMounted(async () => {
 <template>
   <div
     ref="image"
-    class="w-96 h-[29rem] mx-auto rounded-full shadow shadow-slate-500 border border-slate-500 mb-12 bg-about"
+    class="w-96 h-[29rem] mx-auto rounded-full shadow shadow-slate-500 border border-slate-500 mb-8 bg-about"
   >
     <img
       src="../assets/portfolio-about-darken.jpg"
@@ -289,7 +289,7 @@ onMounted(async () => {
     <h2
       class="text-7xl font-extrabold text-green-500 flex items-center gap-4 justify-center"
     >
-      <span>WANTED</span><span class="stamp text-3xl">Top Secret</span>
+      <span class="animate__animated animate__fadeInLeft">WANTED</span><span class="stamp text-3xl animate__animated animate__flipInX animate__delay-1s">Top Secret</span>
     </h2>
     <p class="text-xl text-slate-500 px-8 py-4 max-w-3xl text-center mx-auto">
       We are looking for <strong>Petr Suchánek</strong>. He is skilled and
@@ -299,6 +299,6 @@ onMounted(async () => {
       issues that come his way, a professional who is devoted to upgrading
       software and writing clean code.
     </p>
-    <div class="scroll-indicator py-6 mx-auto mb-8"></div>
+    <div class="scroll-indicator py-6 mx-auto"></div>
   </div>
 </template>

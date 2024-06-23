@@ -5,16 +5,59 @@ import Skills from "@/components/SkillsPage.vue";
 import Projects from "@/components/ProjectsPage.vue";
 import Experience from "@/components/ExperiencePage.vue";
 import Connect from "@/components/ConnectPage.vue";
-import { ref, watch } from "vue";
+import { onMounted, ref } from "vue";
 const { state, portfolioLoadingText, portfolioLoadingProgress } =
   usePortfolio();
 
 const container = ref(null);
+const isChangingPage = ref(false);
 
-watch(container.value, (newValue) => {
-  if (!newValue) return;
-  container.value.addEventListener("scroll", function (e) {
-    e.preventDefault();
+function switchPage(state) {
+  if (isChangingPage.value) return;
+  isChangingPage.value = true;
+  handleStateChange(state);
+  setTimeout(() => {
+    isChangingPage.value = false;
+  }, 1000);
+}
+
+function moveUp() {
+  if (Object.values(portfolioStates).indexOf(state.value) > 3) {
+    switchPage(
+      Object.values(portfolioStates)[
+        Object.values(portfolioStates).indexOf(state.value) - 1
+      ]
+    );
+  }
+}
+
+function moveDown() {
+  if (
+    Object.values(portfolioStates).indexOf(state.value) <
+    Object.values(portfolioStates).length - 1
+  ) {
+    switchPage(
+      Object.values(portfolioStates)[
+        Object.values(portfolioStates).indexOf(state.value) + 1
+      ]
+    );
+  }
+}
+
+onMounted(() => {
+  window.addEventListener("wheel", (event) => {
+    if (
+      Object.values(portfolioStates).indexOf(state.value) <
+      Object.values(portfolioStates).indexOf(portfolioStates.about)
+    ) {
+      return;
+    }
+
+    if (event.deltaY > 0) {
+      moveDown();
+    } else {
+      moveUp();
+    }
   });
 });
 </script>
@@ -80,37 +123,65 @@ watch(container.value, (newValue) => {
           "
           class="absolute top-2 left-2 md:top-6 md:left-6 w-[calc(100%-1rem)] h-[calc(100%-1rem)] md:w-[calc(100%-3rem)] md:h-[calc(100%-3rem)] border rounded-lg border-slate-500 z-1"
         >
-          <div class="flex-1 h-full py-8 overflow-y-auto" ref="container">
-            <About
+          <div>
+            <div
+              class="flex-1 h-full py-8 overflow-y-hidden overflow-x-hidden"
+              ref="container"
+            >
+              <About v-if="state === portfolioStates.about" />
+              <Skills v-if="state === portfolioStates.skills" />
+              <Projects v-if="state === portfolioStates.projects" />
+              <Experience v-if="state === portfolioStates.workExperience" />
+              <Connect v-if="state === portfolioStates.connectWithMe" />
+            </div>
+            <div
               v-if="
                 Object.values(portfolioStates).indexOf(state) >=
                 Object.values(portfolioStates).indexOf(portfolioStates.about)
               "
-            />
-            <Skills
-              v-if="
-                Object.values(portfolioStates).indexOf(state) >=
-                Object.values(portfolioStates).indexOf(portfolioStates.about)
-              "
-            />
-            <Projects
-              v-if="
-                Object.values(portfolioStates).indexOf(state) >=
-                Object.values(portfolioStates).indexOf(portfolioStates.about)
-              "
-            />
-            <Experience
-              v-if="
-                Object.values(portfolioStates).indexOf(state) >=
-                Object.values(portfolioStates).indexOf(portfolioStates.about)
-              "
-            />
-            <Connect
-              v-if="
-                Object.values(portfolioStates).indexOf(state) >=
-                Object.values(portfolioStates).indexOf(portfolioStates.about)
-              "
-            />
+              class="absolute right-0 top-0 h-full flex-col rounded-r-xl hidden md:flex"
+            >
+              <button
+                class="w-8 h-full border-b transition-colors transition-opacity rounded-tr-md"
+                :class="{
+                  'bg-gray-500 opacity-25': state !== portfolioStates.about,
+                  'bg-green-500 opacity-75': state === portfolioStates.about,
+                }"
+                @click="handleStateChange(portfolioStates.about)"
+              ></button>
+              <button
+                class="w-8 h-full border-b transition-colors transition-opacity"
+                :class="{
+                  'bg-gray-500 opacity-25': state !== portfolioStates.skills,
+                  'bg-green-500 opacity-75': state === portfolioStates.skills,
+                }"
+                @click="handleStateChange(portfolioStates.skills)"
+              ></button>
+              <button
+                class="w-8 h-full border-b transition-colors transition-opacity"
+                :class="{
+                  'bg-gray-500 opacity-25': state !== portfolioStates.projects,
+                  'bg-green-500 opacity-75': state === portfolioStates.projects,
+                }"
+                @click="handleStateChange(portfolioStates.projects)"
+              ></button>
+              <button
+                class="w-8 h-full border-b transition-colors transition-opacity"
+                :class="{
+                  'bg-gray-500 opacity-25': state !== portfolioStates.workExperience,
+                  'bg-green-500 opacity-75': state === portfolioStates.workExperience,
+                }"
+                @click="handleStateChange(portfolioStates.workExperience)"
+              ></button>
+              <button
+                class="w-8 h-full border-b transition-colors transition-opacity rounded-br-md"
+                :class="{
+                  'bg-gray-500 opacity-25': state !== portfolioStates.connectWithMe,
+                  'bg-green-500 opacity-75': state === portfolioStates.connectWithMe,
+                }"
+                @click="handleStateChange(portfolioStates.connectWithMe)"
+              ></button>
+            </div>
           </div>
         </div>
       </Transition>

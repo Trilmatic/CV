@@ -1,18 +1,18 @@
 <script setup></script>
 <template>
-  <h3 class="text-3xl font-extrabold text-green-500 text-center mt-20">
+  <h3 class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn">
     Known Employers:
   </h3>
   <div class="flex flex-col gap-3 px-4 items-center mt-4">
-    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
+    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500 animate__animated animate__bounceInRight animate__delay-1s">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">SPORT PROFI spol. s.r.o.</h4>
       </div>
       <p>11/2015-4/2016</p>
       <p>Snowboard instructor and snowpark shaper.</p>
     </div>
-    <div class="text-3xl text-gray-500">•</div>
-    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
+    <div class="text-3xl text-gray-500 animate__animated animate__fadeIn animate__delay-1s">•</div>
+    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500 animate__animated animate__bounceInLeft animate__delay-2s">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">FG Forrest, a.s</h4>
         <a
@@ -46,8 +46,8 @@
         <i>Komerční banka, a. s.</i> and <i>The Prague Castle</i>.
       </p>
     </div>
-    <div class="text-3xl text-gray-500">•</div>
-    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
+    <div class="text-3xl text-gray-500 animate__animated animate__fadeIn animate__delay-2s">•</div>
+    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500 animate__animated animate__bounceInRight animate__delay-3s">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">OLC Systems s.r.o</h4>
         <a
@@ -82,8 +82,8 @@
         organisation.
       </p>
     </div>
-    <div class="text-3xl text-gray-500">•</div>
-    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500">
+    <div class="text-3xl text-gray-500 animate__animated animate__fadeIn animate__delay-3s">•</div>
+    <div class="w-full max-w-xl bg-gray-900 rounded-xl p-4 text-gray-500 animate__animated animate__bounceInLeft animate__delay-4s">
       <div class="flex justify-between">
         <h4 class="text-xl font-bold">NonStop Consulting s.r.o</h4>
         <a

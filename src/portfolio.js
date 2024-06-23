@@ -10,9 +10,9 @@ export const portfolioStates = {
   loading: "loading",
   accessGranted: "accessGranted",
   about: "about",
-  workExperience: "workExperience",
-  education: "education",
   skills: "skills",
+  projects: "projects",
+  workExperience: "workExperience",
   connectWithMe: "connectWithMe",
 };
 
@@ -40,12 +40,10 @@ export const stateChangeHandlers = {
       handleStateChange(portfolioStates.about);
     }, 500);
   },
-  about: () => {
-    setTimeout(() => {}, 350);
-  },
-  workExperience: () => {},
-  education: () => {},
+  about: () => {},
   skills: () => {},
+  projects: () => {},
+  workExperience: () => {},
   connectWithMe: () => {},
 };
 
