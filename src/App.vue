@@ -4,6 +4,7 @@ import About from "@/components/AboutPage.vue";
 import Skills from "@/components/SkillsPage.vue";
 import Projects from "@/components/ProjectsPage.vue";
 import Experience from "@/components/ExperiencePage.vue";
+import Connect from "@/components/ConnectPage.vue";
 import { ref, watch } from "vue";
 const { state, portfolioLoadingText, portfolioLoadingProgress } =
   usePortfolio();
@@ -49,10 +50,10 @@ watch(container.value, (newValue) => {
           v-if="state === portfolioStates.loading"
         >
           <div
-            class="text-slate-500 text-center w-56 lg:w-96 md:w-72 h-6 bg-gradient-to-b from-slate-500 to-slate-600 z-1 relative border-slate-500"
+            class="rounded-xl text-slate-500 text-center w-56 lg:w-96 md:w-72 h-6 bg-gradient-to-b from-slate-500 to-slate-600 z-1 relative border-slate-500"
           >
             <div
-              class="absolute top-0 left-0 text-slate-500 text-center h-6 z-2 bg-gradient-to-b from-green-500 to-green-600"
+              class="absolute top-0 left-0 text-slate-500 text-center h-6 z-2 bg-gradient-to-b from-green-500 to-green-600 rounded-xl"
               :style="'width:' + portfolioLoadingProgress + '%'"
             ></div>
           </div>
@@ -99,6 +100,12 @@ watch(container.value, (newValue) => {
               "
             />
             <Experience
+              v-if="
+                Object.values(portfolioStates).indexOf(state) >=
+                Object.values(portfolioStates).indexOf(portfolioStates.about)
+              "
+            />
+            <Connect
               v-if="
                 Object.values(portfolioStates).indexOf(state) >=
                 Object.values(portfolioStates).indexOf(portfolioStates.about)
