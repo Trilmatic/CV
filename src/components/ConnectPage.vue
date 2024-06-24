@@ -1,9 +1,36 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from "vue";
+import MobileNavigation from "./MobileNavigation.vue";
+
+const count = ref(6);
+const text = ref(null);
+
+function execureCounter() {
+  text.value = null;
+  setTimeout(() => {
+    count.value = 6;
+    const interval = setInterval(() => {
+      if (count.value !== 1) {
+        count.value = count.value - 1;
+        text.value =
+          "This website will self destruct in..." + String(count.value);
+      } else {
+        text.value = "Just kidding 😆";
+        clearInterval(interval);
+      }
+    }, 1000);
+  }, 3000);
+}
+
+onMounted(() => {
+  execureCounter();
+});
+</script>
 <template>
   <div class="flex flex-col h-full justify-center items-center">
-    <div class="flex text-slate-500 gap-4">
+    <div class="md:flex text-slate-500 gap-4">
       <a
-        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center"
+        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center animate__animated animate__bounceInRight"
         href="mailto:suchanek-petr@post.cz?subject=Requesting%20CV"
       >
         <span>Request CV</span>
@@ -29,7 +56,7 @@
         </svg>
       </a>
       <a
-        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center"
+        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center animate__animated animate__bounceInRight animate__delay-1s"
         href="https://github.com/Trilmatic"
         target="_blank"
       >
@@ -53,7 +80,7 @@
         </svg>
       </a>
       <a
-        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center"
+        class="uppercase mt-4 text-xl btn-portfolio p-4 border-2 relative border-slate-500 transition-color hover:border-green-500 hover:text-green-500 hover:after:border-l-3 hover:after:border-l-green-500 flex gap-2 items-center animate__animated animate__bounceInRight animate__delay-2s"
         href="https://www.linkedin.com/in/petr-suchanek/"
         target="_blank"
       >
@@ -81,5 +108,7 @@
         </svg>
       </a>
     </div>
+    <h4 class="text-gray-500 mt-8" v-if="text">{{ text }}!</h4>
   </div>
+  <MobileNavigation />
 </template>

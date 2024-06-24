@@ -2,8 +2,9 @@
 import imageMe from "../assets/portfolio-about-darken.jpg";
 import imageDepthmap from "../assets/portfolio-about-depthmap.png";
 import * as THREE from "three";
+import MobileNavigation from "./MobileNavigation.vue";
 
-import { onMounted, ref } from "vue"; 
+import { onMounted, ref } from "vue";
 
 const canvas = ref(null);
 const image = ref(null);
@@ -274,22 +275,26 @@ onMounted(async () => {
 <template>
   <div
     ref="image"
-    class="w-96 h-[29rem] mx-auto rounded-full shadow shadow-slate-500 border border-slate-500 mb-12 bg-about"
+    class="w-72 md:w-96 h-[22rem] md:h-[29rem] mx-auto rounded-full shadow shadow-slate-500 border border-slate-500 mb-8 bg-about"
   >
     <img
       src="../assets/portfolio-about-darken.jpg"
-      class="rounded-full h-[29rem] lg:hidden"
+      class="rounded-full w-72 h-[22rem] md:h-[29rem] lg:hidden"
     />
     <canvas
       ref="canvas"
-      class="hidden lg:block webgl rounded-full h-[29rem]"
+      class="hidden lg:block webgl rounded-full h-[22rem] md:h-[29rem]"
     ></canvas>
   </div>
   <div>
     <h2
-      class="text-7xl font-extrabold text-green-500 flex items-center gap-4 justify-center"
+      class="text-7xl font-extrabold text-green-500 flex items-center gap-4 justify-center flex-wrap md:flex-nowrap"
     >
-      <span>WANTED</span><span class="stamp text-3xl">Top Secret</span>
+      <span class="animate__animated animate__fadeInLeft">WANTED</span
+      ><span
+        class="stamp text-3xl animate__animated animate__flipInX animate__delay-1s"
+        >Top Secret</span
+      >
     </h2>
     <p class="text-xl text-slate-500 px-8 py-4 max-w-3xl text-center mx-auto">
       We are looking for <strong>Petr Suchánek</strong>. He is skilled and
@@ -299,6 +304,7 @@ onMounted(async () => {
       issues that come his way, a professional who is devoted to upgrading
       software and writing clean code.
     </p>
-    <div class="scroll-indicator py-6 mx-auto mb-8"></div>
+    <div class="hidden md:block scroll-indicator py-6 mx-auto"></div>
+    <MobileNavigation />
   </div>
 </template>

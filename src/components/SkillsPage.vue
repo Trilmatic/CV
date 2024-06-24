@@ -1,6 +1,10 @@
-<script setup></script>
+<script setup>
+import MobileNavigation from "./MobileNavigation.vue";
+</script>
 <template>
-  <h3 class="text-3xl font-extrabold text-green-500 text-center mt-20">
+  <h3
+    class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn"
+  >
     Characteristics:
   </h3>
   <div class="relative overflow-x-auto mt-4 mb-8 max-w-3xl mx-auto rounded-xl">
@@ -8,7 +12,9 @@
       class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 rounded-xl border-separate"
     >
       <tbody>
-        <tr class="border bg-gray-900 border-gray-700 rounded-t-xl">
+        <tr
+          class="border bg-gray-900 border-gray-700 rounded-t-xl animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -17,7 +23,9 @@
           </th>
           <td class="px-6 py-4">Petr Suchánek</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -26,7 +34,9 @@
           </th>
           <td class="px-6 py-4">NonStop Consulting</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -35,7 +45,9 @@
           </th>
           <td class="px-6 py-4">Czechia</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -44,7 +56,9 @@
           </th>
           <td class="px-6 py-4">Yes</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -57,7 +71,9 @@
             >
           </td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -66,7 +82,9 @@
           </th>
           <td class="px-6 py-4">Senior</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -75,7 +93,9 @@
           </th>
           <td class="px-6 py-4">Czech, English (FCE B2)</td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700">
+        <tr
+          class="border bg-gray-900 border-gray-700 animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700"
@@ -86,7 +106,9 @@
             <a href="https://github.com/Trilmatic" class="link">Trilmatic</a>
           </td>
         </tr>
-        <tr class="border bg-gray-900 border-gray-700 rounded-b-xl">
+        <tr
+          class="border bg-gray-900 border-gray-700 rounded-b-xl animate__animated animate__fadeIn animate__delay-1s"
+        >
           <th
             scope="row"
             class="px-6 py-4 font-medium whitespace-nowrap border-gray-700 rounded-bl-xl"
@@ -98,11 +120,13 @@
       </tbody>
     </table>
   </div>
-  <h3 class="text-3xl font-extrabold text-green-500 text-center">
+  <h3
+    class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn animate__delay-2s"
+  >
     Known Skills:
   </h3>
   <div
-    class="bg-gray-900 max-w-3xl mt-4 mx-auto flex justify-center gap-3 p-4 rounded-xl"
+    class="bg-gray-900 max-w-3xl mt-4 mx-auto flex justify-center gap-3 p-4 rounded-xl animate__animated animate__backInLeft animate__delay-3s"
   >
     <a href="https://www.w3schools.com/css/" rel="nofollow">
       <img
@@ -193,7 +217,7 @@
     </a>
   </div>
   <div
-    class="bg-gray-900 max-w-3xl mt-4 mx-auto flex justify-center gap-3 p-4 rounded-xl"
+    class="bg-gray-900 max-w-3xl mt-4 mx-auto flex justify-center gap-3 p-4 rounded-xl animate__animated animate__backInRight animate__delay-4s"
   >
     <a href="https://www.php.net" rel="nofollow">
       <img
@@ -269,4 +293,5 @@
       />
     </a>
   </div>
+  <MobileNavigation />
 </template>
