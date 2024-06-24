@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import MobileNavigation from "./MobileNavigation.vue";
+</script>
 <template>
   <h3
     class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn"
@@ -291,4 +293,5 @@
       />
     </a>
   </div>
+  <MobileNavigation />
 </template>

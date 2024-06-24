@@ -1,10 +1,16 @@
-<script setup></script>
+<script setup>
+import MobileNavigation from "./MobileNavigation.vue";
+</script>
 <template>
-  <h3 class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn">
+  <h3
+    class="text-3xl font-extrabold text-green-500 text-center animate__animated animate__fadeIn"
+  >
     Wanted For:
   </h3>
   <div class="flex justify-center mt-4">
-    <div class="max-w-xl bg-gray-900 rounded-xl p-4 animate__animated animate__fadeIn animate__delay-1s">
+    <div
+      class="max-w-xl bg-gray-900 rounded-xl p-4 animate__animated animate__fadeIn animate__delay-1s"
+    >
       <img
         class="h-24"
         src="https://formsjs.io/images/formsjs-banner.png"
@@ -63,10 +69,12 @@
       </div>
     </div>
   </div>
-  <h3 class="text-3xl font-extrabold text-green-500 text-center mt-4 animate__animated animate__fadeIn animate__delay-2s">
+  <h3
+    class="text-3xl font-extrabold text-green-500 text-center mt-4 animate__animated animate__fadeIn animate__delay-2s"
+  >
     Stats:
   </h3>
-  <div class="px-4 animate__animated animate__fadeIn animate__delay-3s">
+  <div class="animate__animated animate__fadeIn animate__delay-3s">
     <div class="p-0 bg-gray-900 max-w-3xl mx-auto mt-4 rounded-xl">
       <img
         class="rounded-xl w-full"
@@ -88,4 +96,5 @@
       </div>
     </div>
   </div>
+  <MobileNavigation />
 </template>
