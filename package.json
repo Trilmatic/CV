@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "git add dist && git commit -m 'dist subtree deploy'"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.13",
