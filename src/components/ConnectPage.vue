@@ -108,7 +108,7 @@ onMounted(() => {
         </svg>
       </a>
     </div>
-    <h4 class="text-gray-500 mt-8" v-if="text">{{ text }}!</h4>
+    <h4 class="text-gray-500 mt-8 text-center" v-if="text">{{ text }}!</h4>
   </div>
   <MobileNavigation />
 </template>
