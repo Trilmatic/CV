@@ -19,7 +19,7 @@ I am passionate about technology and driven by a relentless desire to learn and 
 
 ## 📈 Stats
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Trilmatic&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Trilmatic&show_icons=true&theme=radical)  
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Trilmatic&layout=compact&theme=radical)
 
 Find out more [here](https://trilmatic.github.io/cv/)
